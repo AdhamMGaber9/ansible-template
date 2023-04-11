@@ -1,0 +1,13 @@
+---
+# handlers file for web
+- name: copy_template
+  template:
+    src: "../templates/{{item}}"
+    dest: /remote/
+  loop: "{{list}}"
+  notify: restart_service
+
+- name: restart_service
+  service:
+    name: "{{package_name}}"
+    state: restarted

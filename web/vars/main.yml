@@ -1,0 +1,8 @@
+---
+# vars file for web
+package_name: httpd
+temp_name: adhom
+temp_message: hi from ameno
+list: 
+  - hi.html.j2
+  - bye.j2
